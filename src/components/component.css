@@ -1,0 +1,15 @@
+.viewheight50{
+    height: 50vh;
+}
+.popupBg{
+    /* background-color: rgba(0, 0, 0, 0.3); */
+    background-color: transparent;
+}
+.imgHeight{
+    height: 50px;
+    width: 40px;
+}
+.logoHeight{
+    height: 25px;
+    width: 25px;
+}
