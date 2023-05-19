@@ -7,7 +7,8 @@ import { Link } from "react-router-dom";
 function Navbar() {
   const [signinModel, setsigninModel] = useState(false);
   const [signupModel, setsignupModel] = useState(false);
-
+  // const [userButton, setUserButton] = useState(false);
+  // setUserButton(true);
 
   return (
     <div>
@@ -24,41 +25,67 @@ function Navbar() {
                 </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
+                <Link
+                  className="nav-link active"
+                  aria-current="page"
+                  to="/contact"
+                >
                   Contact
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
+                <Link
+                  className="nav-link active"
+                  aria-current="page"
+                  to="/services"
+                >
                   Services
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
+                <Link
+                  className="nav-link active"
+                  aria-current="page"
+                  to="/about"
+                >
                   About Us
-                </a>
+                </Link>
               </li>
             </ul>
-            <button
-              className="btn btn-success btn-sm"
-              onClick={() => {
-                setsigninModel(true);
-                setsignupModel(false)
-              }}
-              type="submit"
-            >
-              SignIn
-            </button>
-            <button
-              className="btn btn-warning btn-sm ms-1 "
-              onClick={() => {
-                setsignupModel(true);
-                setsigninModel(false);
-              }}
-              type="submit"
-            >
-              SignUp
-            </button>
+            {
+              false? <div>
+              <button
+                className="btn btn-success btn-sm"
+                onClick={() => {
+                  setsigninModel(true);
+                  setsignupModel(false);
+                }}
+                type="submit"
+              >
+                SignIn
+              </button>
+              <button
+                className="btn btn-warning btn-sm ms-1 "
+                onClick={() => {
+                  setsignupModel(true);
+                  setsigninModel(false);
+                }}
+                type="submit"
+              >
+                SignUp
+              </button>
+            </div>:<div>
+
+          <button className="btn btn-light btn-sm me-1">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <b className="text-success ms-1">0</b>
+          </button>
+          
+                <Link  to="/userprofile" className="btn btn-light btn-sm">
+              {JSON.parse(localStorage.getItem("logedUser"))[0].name} 
+                </Link>
+              </div>
+            }  
           </div>
         </div>
       </nav>

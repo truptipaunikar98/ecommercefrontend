@@ -1,14 +1,32 @@
 import React, { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { addDoc, collection, doc, deleteDoc, getDocs, updateDoc } from "firebase/firestore";
+import { db } from "../firebase/Firebase";
+
 
 function SignIn({ closeModel }) {
+  const userCollectionRef = collection(db, "users");
+
   const [value, setValue] = useState({
     email: "",
     password: "",
   });
   const onSubmit = async (values, { resetForm }) => {
     console.log(values);
+    const data = await getDocs(userCollectionRef);
+    let users=(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    let logedUser=users.filter((v, i)=>{
+      return(
+        v.email == values.email && v.password == values.password
+      )
+    })
+    if(logedUser.length==0){
+      alert("email or password wrong")
+    }else{
+      localStorage.setItem("logedUser", JSON.stringify(logedUser))
+      closeModel(false);
+    } 
   };
 
   const ValidateSchema = Yup.object().shape({
@@ -25,7 +43,7 @@ function SignIn({ closeModel }) {
   return (
     <div className=" popupBg">
       <div
-        className="form width300 "
+        className="form width300 popupBoxShadow "
         style={{
           transform: "translate(-50%, -50%)",
           zIndex: "1",
@@ -46,12 +64,12 @@ function SignIn({ closeModel }) {
               type="button"
               className=" text-danger"
             >
-              X
+             <i class="fa-regular fa-circle-xmark"></i>
             </span>
           </div>
           <div className="inputDiv my-2 mx-1">
             <label>Email</label>
-            <br />
+            <br/>
             <input
               type="email"
               name="email"

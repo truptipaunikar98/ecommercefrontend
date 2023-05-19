@@ -7,6 +7,10 @@ import Trending from "../pages/Trending";
 import Kids from "../pages/Kids";
 import Footwear from "../pages/Footwear";
 import Essential from "../pages/Essential";
+import Userprofile from "../pages/Userprofile";
+import About from "../pages/About";
+import Services from "../pages/Services";
+import Contact from "../pages/Contact"
 
 function Allroutes() {
   return (
@@ -20,6 +24,12 @@ function Allroutes() {
         <Route path="/footwear" element={<Footwear/>}/>
         <Route path="/essential" element={<Essential/>}/>
         <Route path="/trending" element={<Trending/>}/>
+        <Route path="/about" element={<About/>}/>
+        <Route path="/services" element={<Services/>}/>
+        <Route path="/contact" element={<Contact/>}/>
+        
+        <Route path="/userprofile" element={<Userprofile/>}/>
+        
       </Routes>
     </div>
   );

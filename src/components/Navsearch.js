@@ -4,19 +4,19 @@ import { Link } from "react-router-dom";
 function Navsearch() {
   return (
     <div className="row ">
-      <div className="row col-lg-6 col-md-12 p-1 ">
+      <div className="row col-lg-6 col-md-12 p-1  ">
         <div className=" text-center col-md-2 col-4 ">
-          <Link  to='/menswear'>
+          <Link style={{textDecoration:"none", color:"black"}} to="/menswear">
             <img
               className="imgHeight "
-              src="https://cdn-icons-png.flaticon.com/512/4086/4086679.png"
+              src="https://cdn.icon-icons.com/icons2/2121/PNG/512/avatar_people_man_boy_child_icon_131271.png"
               alt=""
             ></img>
             <p className="mb-0">Mens Wear</p>
           </Link>
         </div>
         <div className=" text-center col-md-2 col-4">
-          <Link to='/womenswear'>
+          <Link style={{textDecoration:"none", color:"black"}} to="/womenswear">
             <img
               className="imgHeight "
               src="https://www.shutterstock.com/image-vector/decorative-fashion-girl-beauty-salon-600w-44862619.jpg"
@@ -26,40 +26,40 @@ function Navsearch() {
           </Link>
         </div>
         <div className=" text-center col-md-2 col-4">
-          <Link to='/kidswear'>
+          <Link style={{textDecoration:"none", color:"black"}} to="/kidswear">
             <img
               className="imgHeight "
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0EFTR2STt3ZoV0vRvbE6A5a83lk7C-vY-Uw&usqp=CAU"
+              src="https://cdn-icons-png.flaticon.com/512/167/167142.png"
               alt=""
             ></img>
             <p className="mb-0">Kids Wear</p>
           </Link>
         </div>
         <div className=" text-center col-md-2 col-4">
-          <Link to='/footwear'>
+          <Link style={{textDecoration:"none", color:"black"}} to="/footwear">
             <img
               className="imgHeight "
-              src="https://rukminim1.flixcart.com/image/832/832/krntoy80/kids-shoe/l/o/l/12c-combo-2-1663-1667-world-wear-footwear-original-imag5edftfvq4pxz.jpeg?q=70"
+              src="https://cdn-icons-png.flaticon.com/512/2362/2362563.png"
               alt=""
             ></img>
             <p className="mb-0">Foot Wear</p>
           </Link>
         </div>
         <div className=" text-center col-md-2 col-4">
-          <Link to='/essential'>
+          <Link style={{textDecoration:"none", color:"black"}} to="/essential">
             <img
               className="imgHeight "
-              src="https://www.heart.org/-/media/Healthy-Living-Images/Healthy-Lifestyle/testLE8.jpg?h=530&iar=0&mw=960&w=900&hash=7BC68EC1873A32E5D9F857D0A6FFB3EC"
+              src="https://static.thenounproject.com/png/692176-200.png"
               alt=""
             ></img>
             <p className="mb-0">Essential</p>
           </Link>
         </div>
         <div className=" text-center col-md-2 col-4">
-          <Link to='/trending'>
+          <Link style={{textDecoration:"none", color:"black"}} to="/trending">
             <img
               className="imgHeight "
-              src="https://img.freepik.com/free-vector/clothes-rack-white-background_1308-43033.jpg"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg7Mdse040D8UC4hGh69MbLC_FxUBUIZnt8zxl_pogGMJtIA90i0QjSa_BfWxYslhit7A&usqp=CAU"
               alt=""
             ></img>
             <p className="mb-0">Trending</p>
@@ -83,22 +83,22 @@ function Navsearch() {
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-             Filter
+              Filter
             </button>
             <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
               <li>
                 <a className="dropdown-item" href="#">
-                  Action
+                  Price
                 </a>
               </li>
               <li>
                 <a className="dropdown-item" href="#">
-                  Another action
+                  Rating
                 </a>
               </li>
               <li>
                 <a className="dropdown-item" href="#">
-                  Something else here
+                  category
                 </a>
               </li>
             </ul>

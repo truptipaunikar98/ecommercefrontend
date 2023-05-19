@@ -21,3 +21,8 @@
 .width300{
   width: 300px;
 }
+
+.popupBoxShadow{
+  border: 2px solid rgb(54, 53, 53);
+  box-shadow: 2px 2px 2px black;
+}

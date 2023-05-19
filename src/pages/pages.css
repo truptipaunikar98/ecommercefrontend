@@ -1,0 +1,28 @@
+/* userprofile start */
+.userImg{
+    height: 70px;
+    width: 70px;  
+}
+.userDiv{
+    border: 2px solid black;
+    box-shadow: 2px 2px 2px  black;
+    border-radius: 8px;
+}
+.userDiv:hover{
+    box-shadow: -2px -2px 4px  black;
+}
+
+.width350{
+    width: 400px;
+}
+.positionCenter{
+    position: relative;
+    left: 50%;
+    transform: translate(0%, -50%);
+}
+/* userprofile end */
+
+
+
+
+
